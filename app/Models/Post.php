@@ -11,6 +11,11 @@ class Post extends Model
     use HasFactory;
 
     /**
+     * Indicates if all mass assignment is enabled.
+     */
+    protected static $unguarded = true;
+
+    /**
      * User who created the post.
      */
     public function user(): BelongsTo
